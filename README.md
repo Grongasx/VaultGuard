@@ -23,10 +23,11 @@ O protótipo está em desenvolvimento no Figma. (https://www.figma.com/design/ZJ
 - Interface amigável e responsiva ✔️
 
 # Extrutura planejada
+
 lib/
-├── main.dart
-├── screens/
-│   ├── login_screen.dart
+--> main.dart
+--> screens/
+   |--> login_screen.dart
 │   └── home_screen.dart
 ├── widgets/
 │   └── password_card.dart
