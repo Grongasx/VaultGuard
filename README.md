@@ -25,19 +25,28 @@ O protótipo está em desenvolvimento no Figma. (https://www.figma.com/design/ZJ
 # Extrutura planejada
 
 lib/
---> main.dart
---> screens/
-   |--> login_screen.dart
-│   └── home_screen.dart
-├── widgets/
-│   └── password_card.dart
-├── services/
-│   ├── auth_service.dart
-│   └── database_service.dart
-├── models/
-│   └── password_entry.dart
-└── utils/
-    └── encryption_helper.dart
+├── main.dart # Ponto de entrada do aplicativo
+├── screens/ # Telas principais do app
+│ ├── login_screen.dart
+│ ├── register_screen.dart
+│ ├── home_screen.dart
+│ ├── password_list_screen.dart
+│ └── password_detail_screen.dart
+├── widgets/ # Componentes reutilizáveis de UI
+│ ├── password_card.dart
+│ ├── custom_text_field.dart
+│ └── vaultguard_logo.dart
+├── services/ # Lógica de autenticação e banco de dados
+│ ├── auth_service.dart
+│ ├── database_service.dart
+│ └── encryption_service.dart
+├── models/ # Estruturas de dados do app
+│ └── password_entry.dart
+├── utils/ # Funções auxiliares e constantes
+│ ├── constants.dart
+│ └── helpers.dart
+└── theme/ # Configurações de tema e estilo
+└── app_theme.dart
 
 # Segurança
 - Todos os dados armazenados são criptografados localmente antes de serem enviados ao Firestore.
