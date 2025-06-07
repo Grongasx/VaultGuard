@@ -71,25 +71,25 @@ lib/
 Aqui estão algumas telas do protótipo atual do VaultGuard:
 
 ### 🔑 Tela de Login
-![Login](https://user-images.githubusercontent.com/Grongasx/prototipo/login-prototype.png)
+![Login](https://github.com/Grongasx/VaultGuard/tree/main/prototipo/login-prototype.png)
 
 ### 📝 Tela de Cadastro
-![Cadastro](https://user-images.githubusercontent.com/Grongasx/prototipo/register-prototype.png)
+![Cadastro](https://github.com/Grongasx/VaultGuard/tree/main/prototipo/register-prototype.png)
 
 ### 🏠 Tela Inicial
-![Home](https://user-images.githubusercontent.com/Grongasx/prototipo/home-prototype.png)
+![Home](https://github.com/Grongasx/VaultGuard/tree/main/prototipo/home-prototype.png)
 
 ### 📂 Grupo de Contas
-![Grupo](https://user-images.githubusercontent.com/Grongasx/prototipo/group-prototype.png)
+![Grupo](https://github.com/Grongasx/VaultGuard/tree/main/prototipo/group-prototype.png)
 
 ### ❌ Exclusão de Contas no Grupo
-![Delete](https://user-images.githubusercontent.com/Grongasx/prototipo/delete-group-prototype.png)
+![Delete](https://github.com/Grongasx/VaultGuard/tree/main/prototipo/delete-group-prototype.png)
 
 ### ➕ Adicionar Conta
-![Adicionar Conta](https://user-images.githubusercontent.com/Grongasx/prototipo/add-account-prototype.png)
+![Adicionar Conta](https://github.com/Grongasx/VaultGuard/tree/main/prototipo/add-account-prototype.png)
 
 ### ⚙️ Navbar de Opções
-![Opções](https://user-images.githubusercontent.com/Grongasx/prototipo/Options.png)
+![Opções](https://github.com/Grongasx/VaultGuard/tree/main/prototipo/Options.png)
 
 ---
 
