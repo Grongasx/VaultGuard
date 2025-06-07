@@ -66,6 +66,30 @@ lib/
 
 ---
 
+## 🖼️ Capturas de Tela do Protótipo
+
+Aqui estão algumas telas do protótipo atual do VaultGuard:
+
+### 🔑 Tela de Login
+![Login](https://user-images.githubusercontent.com/Grongasx/login-prototype.png)
+
+### 📝 Tela de Cadastro
+![Cadastro](https://user-images.githubusercontent.com/Grongasx/register-prototype.png)
+
+### 🏠 Tela Inicial
+![Home](https://user-images.githubusercontent.com/Grongasx/home-prototype.png)
+
+### 📂 Grupo de Contas
+![Grupo](https://user-images.githubusercontent.com/Grongasx/group-prototype.png)
+
+### ❌ Exclusão de Contas no Grupo
+![Delete](https://user-images.githubusercontent.com/Grongasx/delete-group-prototype.png)
+
+### ➕ Adicionar Conta
+![Adicionar Conta](https://user-images.githubusercontent.com/Grongasx/add-account-prototype.png)
+
+---
+
 ## 📦 Instalação
 
 Clone o repositório e instale as dependências:
