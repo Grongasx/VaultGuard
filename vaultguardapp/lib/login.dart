@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
           // Fundo
           Positioned.fill(
             child: Image.asset(
-              'assets/images/Background.png',
+              'assets/images/Background.png', // Certifique-se que este asset existe
               fit: BoxFit.cover,
             ),
           ),
@@ -25,10 +25,9 @@ class LoginPage extends StatelessWidget {
                 children: [
                   // Logo
                   Image.asset(
-                    'assets/images/LogoLetraBranca2.png',
+                    'assets/images/LogoLetraBranca2.png', // Certifique-se que este asset existe
                     width: 150,
                     height: 150,
-                    
                   ),
                   const SizedBox(height: 32),
 
@@ -38,7 +37,12 @@ class LoginPage extends StatelessWidget {
                       filled: true,
                       fillColor: Colors.white10,
                       labelText: 'E-mail',
-                      border: OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.yellow),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       labelStyle: const TextStyle(color: Colors.white),
@@ -55,7 +59,12 @@ class LoginPage extends StatelessWidget {
                       filled: true,
                       fillColor: Colors.white10,
                       labelText: 'Senha',
-                      border: OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.yellow),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       labelStyle: const TextStyle(color: Colors.white),
@@ -66,20 +75,77 @@ class LoginPage extends StatelessWidget {
 
                   // Botão entrar
                   SizedBox(
-                    width: double.infinity,
+                    width: 50, // Mantido como no seu código original
                     child: ElevatedButton(
                       onPressed: () {
-                        // Ação de login aqui
+                        print('Botão Entrar pressionado');
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
+                          padding: const EdgeInsets.symmetric(vertical: 16),
+                          backgroundColor: const Color(0xFFF7A438),
+                          shape: RoundedRectangleBorder( // Para combinar com o borderRadius dos TextFields
+                            borderRadius: BorderRadius.circular(12),
+                          )
                       ),
-                      child: const Text(
-                        'Entrar',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      child: const Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white, // Adicionando cor ao ícone para melhor visibilidade
                       ),
                     ),
+                  ),
+                  const SizedBox(height: 24), // Espaçamento antes do link de cadastro
+
+                  // Opção de Cadastro
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Não tem uma conta? ',
+                        style: TextStyle(color: Colors.white70),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          print('TextButton: Navegar para a tela de Cadastro');
+                        },
+                        style: TextButton.styleFrom(
+                          foregroundBuilder: (BuildContext context, Set<WidgetState> states, Widget? child) {
+                            return DecoratedBox(
+                              decoration: BoxDecoration(
+                                border:
+                                  states.contains(WidgetState.hovered)
+                                    ? Border(bottom: BorderSide(color: Colors.yellow))
+                                    : const Border(),
+                                  ),
+                                  child: child,
+                            );
+                        },
+                          overlayColor: Colors.transparent,
+                        ),
+                        child: const Text('Cadastre-se', style: TextStyle(color: Colors.yellow)),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  TextButton(
+                    onPressed: () {
+                      print('Esqueci minha senha');
+                    },
+                    style: TextButton.styleFrom(
+                      foregroundBuilder: (BuildContext context, Set<WidgetState> states, Widget? child) {
+                      return DecoratedBox(
+                        decoration: BoxDecoration(
+                        border:
+                          states.contains(WidgetState.hovered)
+                          ? Border(bottom: BorderSide(color: Colors.yellow))
+                          : const Border(),
+                        ),
+                      child: child);
+                      },
+                      foregroundColor: Colors.white70,
+                      overlayColor: Colors.transparent,
+                      ),
+
+                      child: Text('Esqueci minha senha', style: TextStyle(color: Colors.yellow),),
                   ),
                 ],
               ),
