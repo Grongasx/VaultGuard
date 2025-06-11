@@ -1,9 +1,16 @@
 import 'dart:async';
+import 'login.dart';
 import 'package:flutter/material.dart';
-import 'login.dart'; // certifique-se de importar corretamente
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      enabled: !kReleaseMode, // Ativa apenas em debug
+      builder: (context) => MyApp(), // App raiz
+      ),
+    );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,6 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      useInheritedMediaQuery: true,
+      builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
       title: 'VaultGuard',
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
@@ -35,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const LoginPage()),
+        MaterialPageRoute(builder: (_) => const loginPage()),
       );
     });
   }

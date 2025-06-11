@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'logon.dart';
+import 'forgot_password.dart';
+import 'homepage.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class loginPage extends StatelessWidget {
+  const loginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +81,10 @@ class LoginPage extends StatelessWidget {
                     width: 50, // Mantido como no seu código original
                     child: ElevatedButton(
                       onPressed: () {
-                        print('Botão Entrar pressionado');
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (_) => const HomePage()),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 16),
@@ -105,7 +111,10 @@ class LoginPage extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          print('TextButton: Navegar para a tela de Cadastro');
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (_) => const logonPage()),
+                          );
                         },
                         style: TextButton.styleFrom(
                           foregroundBuilder: (BuildContext context, Set<WidgetState> states, Widget? child) {
@@ -128,7 +137,10 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(height: 16),
                   TextButton(
                     onPressed: () {
-                      print('Esqueci minha senha');
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (_) => const ForgotPasswordPage()),
+                      );
                     },
                     style: TextButton.styleFrom(
                       foregroundBuilder: (BuildContext context, Set<WidgetState> states, Widget? child) {
