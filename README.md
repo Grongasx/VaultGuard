@@ -123,7 +123,7 @@ Sinta-se livre para abrir **issues** ou enviar **pull requests**.
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
+Este projeto está licenciado sob a [MIT License](https://mit-license.org/).
 
 ---
 
